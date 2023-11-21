@@ -70,4 +70,7 @@ return {
 			table.insert(opts.sources, { name = "emoji" })
 		end,
 	},
+	{
+		"tpope/vim-fugitive",
+	},
 }

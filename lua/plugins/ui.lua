@@ -127,7 +127,7 @@ return {
 		cmd = "ZenMode",
 		opts = {
 			plugins = {
-				gitsigns = true,
+				gitsigns = { enabled = true },
 				tmux = true,
 				kitty = { enabled = false, font = "+2" },
 			},
