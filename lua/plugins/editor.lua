@@ -33,19 +33,6 @@ return {
 	},
 
 	{
-		"dinhhuy258/git.nvim",
-		event = "BufReadPre",
-		opts = {
-			keymaps = {
-				-- Open blame window
-				blame = "<Leader>gb",
-				-- Open file/folder in git repository
-				browse = "<Leader>go",
-			},
-		},
-	},
-
-	{
 		"telescope.nvim",
 		dependencies = {
 			{
@@ -165,8 +152,8 @@ return {
 			opts.pickers = {
 				diagnostics = {
 					theme = "ivy",
-					initial_mode = "normal",
 					layout_config = {
+						initial_mode = "normal",
 						preview_cutoff = 9999,
 					},
 				},
