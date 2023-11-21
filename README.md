@@ -18,3 +18,16 @@ npm install -g typescript typescript-language-server
 TSUpdate lua
 
 ```
+
+## Useful commands:
+
+```
+// should show a list of all the vim.opt.* options
+
+:help option-list
+
+```
+
+## Helpful video with more barebones setup
+
+![0 to 100 with LSP](https://www.youtube.com/watch?v=w7i4amO_zaE)
