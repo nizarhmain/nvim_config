@@ -70,7 +70,8 @@ return {
 					local builtin = require("telescope.builtin")
 					builtin.find_files({
 						no_ignore = false,
-						hidden = true,
+						hidden = false,
+						no_ignore_parent = false,
 					})
 				end,
 				desc = "Lists files in your current working directory, respects .gitignore",
@@ -135,8 +136,8 @@ return {
 					telescope.extensions.file_browser.file_browser({
 						path = "%:p:h",
 						cwd = telescope_buffer_dir(),
-						respect_gitignore = false,
-						hidden = true,
+						respect_gitignore = true,
+						hidden = false,
 						grouped = true,
 						previewer = false,
 						initial_mode = "normal",

@@ -1,5 +1,5 @@
+-- messages, cmdline and the popupmenu
 return {
-	-- messages, cmdline and the popupmenu
 	{
 		"folke/noice.nvim",
 		opts = function(_, opts)
@@ -58,17 +58,6 @@ return {
 		opts = {
 			timeout = 5000,
 		},
-	},
-
-	-- animations
-	{
-		"echasnovski/mini.animate",
-		event = "VeryLazy",
-		opts = function(_, opts)
-			opts.scroll = {
-				enable = false,
-			}
-		end,
 	},
 
 	-- buffer line
