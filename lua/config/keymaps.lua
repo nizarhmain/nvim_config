@@ -1,8 +1,11 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+keymap.set("n", "<C-_>", ":CommentToggle<CR>", opts) -- Ctrl-/ in normal mode
+keymap.set("v", "<C-_>", ":CommentToggle<CR>", opts) -- Ctrl-/ in visual
+
 -- Delete a word backwards
-keymap.set("n", "dw", 'vb"_d')
+-- keymap.set("n", "dw", 'vb"_d')
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")

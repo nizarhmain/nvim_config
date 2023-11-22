@@ -7,7 +7,6 @@ return {
 			position = "right",
 		},
 	},
-
 	{
 		"nvim-cmp",
 		dependencies = { "hrsh7th/cmp-emoji" },
@@ -17,5 +16,12 @@ return {
 	},
 	{
 		"tpope/vim-fugitive",
+	},
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
 	},
 }
