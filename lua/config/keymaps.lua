@@ -1,6 +1,20 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Disable key mappings in insert mode
+vim.api.nvim_set_keymap("i", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<A-k>", "<Nop>", { noremap = true, silent = true })
+
+-- Disable key mappings in normal mode
+vim.api.nvim_set_keymap("n", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-k>", "<Nop>", { noremap = true, silent = true })
+
+-- Disable key mappings in visual block mode
+vim.api.nvim_set_keymap("x", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<A-k>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "J", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "K", "<Nop>", { noremap = true, silent = true })
+
 keymap.set("n", "<C-_>", ":CommentToggle<CR>", opts) -- Ctrl-/ in normal mode
 keymap.set("v", "<C-_>", ":CommentToggle<CR>", opts) -- Ctrl-/ in visual
 
