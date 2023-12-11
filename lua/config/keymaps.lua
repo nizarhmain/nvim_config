@@ -55,3 +55,18 @@ end, opts)
 keymap.set("n", "<leader>r", function()
 	require("craftzdog.utils").replaceHexWithHSL()
 end)
+
+-- Lazy Lua mappings
+vim.api.nvim_set_keymap(
+	"i",
+	"<TAB>",
+	'pumvisible() ? "<C-n>" : v:lua.check_back_space() ? "<TAB>" : coc#refresh()',
+	{ expr = true, silent = true }
+)
+vim.api.nvim_set_keymap("i", "<S-TAB>", 'pumvisible() ? "<C-p>" : "<C-h>"', { expr = true, silent = true })
+
+-- Lua function to check backspace
+function _G.check_back_space()
+	local col = vim.fn.col(".") - 1
+	return col == 0 or vim.fn.getline(".")[col] == #"\\s"
+end

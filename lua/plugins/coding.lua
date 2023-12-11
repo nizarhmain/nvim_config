@@ -24,4 +24,8 @@ return {
 		},
 		lazy = false,
 	},
+	{
+		"neoclide/coc.nvim",
+		branch = "release",
+	},
 }
