@@ -61,3 +61,18 @@ function _G.check_back_space()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline(".")[col] == #"\\s"
 end
+
+-- Use <C-l> for trigger snippet expand.
+vim.api.nvim_set_keymap("i", "<C-l>", "<Plug>(coc-snippets-expand)", { noremap = true, silent = true })
+
+-- Use <C-j> for select text for visual placeholder of snippet.
+vim.api.nvim_set_keymap("v", "<C-j>", "<Plug>(coc-snippets-select)", { noremap = true, silent = true })
+
+-- Use <C-j> for jump to next placeholder, it's default of coc.nvim
+vim.g.coc_snippet_next = "<c-j>"
+
+-- Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+vim.g.coc_snippet_prev = "<c-k>"
+
+-- Use <C-j> for both expand and jump (make expand higher priority.)
+vim.api.nvim_set_keymap("i", "<C-j>", "<Plug>(coc-snippets-expand-jump)", { noremap = true, silent = true })

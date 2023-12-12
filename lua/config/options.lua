@@ -26,6 +26,7 @@ vim.opt.smarttab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.spell = true
+vim.opt.wrap = true
 -- git test
 
 vim.opt.wrap = false -- No Wrap lines

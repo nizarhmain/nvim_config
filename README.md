@@ -10,13 +10,33 @@ Install `ripgrep`, very much needed. Telescope will not work properly without it
 
 // convert the following scripts in a .sh down below and run them
 
-```sh
+```bash
 brew install ripgrep
 
 npm install -g typescript typescript-language-server
 
 TSUpdate lua
 
+```
+
+## Snippets stuff
+
+[This was really helpful here](https://www.chiarulli.me/Neovim/17-snippets/)
+
+Install pynvim
+
+```
+pip3 install pynvim
+```
+
+Install Coc Snippets
+
+```
+:CocInstall coc-snippets
+```
+
+```bash
+pip3 install pynvim
 ```
 
 ## Useful commands:
