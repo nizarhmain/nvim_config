@@ -9,6 +9,9 @@ vim.api.nvim_set_keymap("i", "<A-k>", "<Nop>", { noremap = true, silent = true }
 vim.api.nvim_set_keymap("n", "<A-j>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-k>", "<Nop>", { noremap = true, silent = true })
 
+-- Go to previous buffer
+vim.api.nvim_set_keymap("n", "<C-I>", "<C-i>", { noremap = true, silent = true })
+
 -- Disable key mappings in visual block mode
 vim.api.nvim_set_keymap("x", "<A-j>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("x", "<A-k>", "<Nop>", { noremap = true, silent = true })
@@ -62,15 +65,13 @@ function _G.check_back_space()
 	return col == 0 or vim.fn.getline(".")[col] == #"\\s"
 end
 
+-- This is cloc snippet stuff
 -- Use <C-l> for trigger snippet expand.
 vim.api.nvim_set_keymap("i", "<C-l>", "<Plug>(coc-snippets-expand)", { noremap = true, silent = true })
-
 -- Use <C-j> for select text for visual placeholder of snippet.
 vim.api.nvim_set_keymap("v", "<C-j>", "<Plug>(coc-snippets-select)", { noremap = true, silent = true })
-
 -- Use <C-j> for jump to next placeholder, it's default of coc.nvim
 vim.g.coc_snippet_next = "<c-j>"
-
 -- Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 vim.g.coc_snippet_prev = "<c-k>"
 

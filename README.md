@@ -1,6 +1,6 @@
-## Credits
+# My Neovim config
 
-Copied from https://github.com/craftzdog/dotfiles-public and modified to my needs
+Copied from [Craftzdog original repo](https://github.com/craftzdog/dotfiles-public)
 
 Make sure to run `TSUpdate lua`
 
@@ -25,13 +25,13 @@ TSUpdate lua
 
 Install pynvim
 
-```
+```bash
 pip3 install pynvim
 ```
 
 Install Coc Snippets
 
-```
+```bash
 :CocInstall coc-snippets
 ```
 
@@ -39,9 +39,9 @@ Install Coc Snippets
 pip3 install pynvim
 ```
 
-## Useful commands:
+## Useful commands
 
-```
+```vi
 // should show a list of all the vim.opt.* options
 
 :help option-list
@@ -51,3 +51,19 @@ pip3 install pynvim
 ## Helpful video with more barebones setup
 
 [0 to 100 with LSP](https://www.youtube.com/watch?v=w7i4amO_zaE)
+
+## New shortcuts learned
+
+Lets you want to jump directly to the `maps` word.
+Type `vi(`
+
+```typescript
+const location = findLocation(maps, seed);
+```
+
+Same if you want to jump to the thing inside the brackets
+type `vi[`
+
+```typescript
+const location = findLocation[(maps, seed)];
+```
