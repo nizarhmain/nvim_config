@@ -24,8 +24,9 @@ return {
 		},
 		lazy = false,
 	},
-	{
-		"neoclide/coc.nvim",
-		branch = "release",
-	},
+	-- causing problems
+	-- {
+	-- 	"neoclide/coc.nvim",
+	-- 	branch = "release",
+	-- },
 }
