@@ -20,6 +20,7 @@ return {
 				"scss",
 				"sql",
 				"svelte",
+				"vimdoc",
 			},
 
 			-- matchup = {
